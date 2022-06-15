@@ -18,7 +18,7 @@ public class Base {
         properties.load(fileInputStream);
         String browserName = properties.getProperty("browser");
         if (browserName.equals("chrome")) {
-            System.setProperty("webdriver.chrome.driver", PROJECT_ROOT_DIR + "\\src\\main\\resources\\driver\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", PROJECT_ROOT_DIR + "\\src\\main\\resources\\chromedriver.exe");
             driver = new ChromeDriver();
         } else if (browserName.equals("firefox")) {
             //add firefox code here
