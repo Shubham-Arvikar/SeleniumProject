@@ -19,16 +19,17 @@ public class NavigationPageValidation extends Base {
         driver.manage().window().maximize();
         driver.get("http://www.qaclickacademy.com/");
     }
+
     @Test
     public void navigationPageValidate() throws IOException, InterruptedException {
         LandingPage landingPage = new LandingPage(driver);
         new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(landingPage.getNoThanksBtn()));
         landingPage.getNoThanksBtn().click();
-        Assert.assertTrue(driver.findElement(By.cssSelector("[class*=\"navbar-nav\"]")).isDisplayed(),"Navigation bar is not displayed");
+        Assert.assertTrue(driver.findElement(By.cssSelector("[class*=\"navbar-nav\"]")).isDisplayed(), "Navigation bar is not displayed");
     }
 
     @AfterMethod
-    public void tearDown(){
+    public void tearDown() {
         driver.close();
     }
 }

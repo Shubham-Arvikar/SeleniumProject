@@ -4,7 +4,6 @@
 
     <test name="order">
         <classes>
-            <class name="HomePage" />
             <class name="NavigationPageValidation" />
             <class name="validateCourseName" />
         </classes>
